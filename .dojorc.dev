@@ -1,0 +1,10 @@
+{
+	"extends": ".dojorc",
+	"build-app": {
+		"build-time-render": {
+			"static": false
+		}
+	},
+	"test-intern": {},
+	"create-app": {}
+}

@@ -1,4 +1,13 @@
 import renderer, { tsx } from '@dojo/framework/core/vdom';
+import Registry from '@dojo/framework/core/Registry';
+import { registerRouterInjector } from '@dojo/framework/routing/RouterInjector';
+import StateHistory from '@dojo/framework/routing/history/StateHistory';
 
-const r = renderer(() => <div>Hello, Dojo World!</div>);
-r.mount();
+import App from './App';
+import routes from './routes';
+
+const registry = new Registry();
+registerRouterInjector(routes, registry, { HistoryManager: StateHistory });
+
+const r = renderer(() => <App />);
+r.mount({ registry });

@@ -1,5 +1,15 @@
 {
-	"build-app": {},
+	"build-app": {
+		"watchExtraFiles": ["content/**"],
+		"build-time-render": {
+			"static": false,
+			"root": "app",
+			"renderer": "jsdom"
+		},
+		"features": {
+			"dom-pointer-events": true
+		}
+	},
 	"test-intern": {},
 	"create-app": {}
 }
