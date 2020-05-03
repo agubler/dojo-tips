@@ -4,7 +4,7 @@ export default [
 		path: '/',
 		outlet: 'main',
 		defaultRoute: true,
-		title: 'Dojo Tips Blogs'
+		title: 'Dojo Tips Blogs',
 	},
 	{
 		id: 'blog',
