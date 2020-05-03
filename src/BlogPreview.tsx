@@ -23,7 +23,11 @@ export default factory(function BlogPreview({ properties, middleware: { theme } 
 			<Link to="blog" params={{ blog: file }} classes={[themeCss.link]}>
 				<div classes={[themeCss.container]}>
 					<div classes={[themeCss.imageWrapper]}>
-						<img loading="lazy" src={image} classes={[themeCss.image]} alt={title} />
+						<picture>
+							<source type="image/webp" srcset={image.replace(/\.(jpg|png)/, '.webp')} />
+							<source type="image/png" srcset={image} />
+							<img alt={title} loading="lazy" classes={[themeCss.image]} src={image} />
+						</picture>
 					</div>
 					<div classes={[themeCss.textWrapper]}>
 						<h1 classes={[themeCss.title]}>{title}</h1>
