@@ -8,5 +8,28 @@
 </head>
 <body>
 	<div id="app"></div>
+	<script>
+		var s = document.getElementById('switch');
+		if (s) {
+			var l = document.getElementById('light-theme').getAttribute('data-theme');
+			var d = document.getElementById('dark-theme').getAttribute('data-theme');
+			var c = localStorage.getItem('theme') || l;
+			if (c && c.indexOf('dark') !== -1) {
+				s.checked = true;
+			}
+			s.addEventListener('change', (event) => {
+				if (event.target.checked) {
+					app.classList.remove(l);
+					app.classList.add(d);
+					localStorage.setItem('theme', d);
+				} else {
+					app.classList.remove(d);
+					app.classList.add(l);
+					localStorage.setItem('theme', l);
+				}
+			});
+			app.classList.add(c);
+		}
+	</script>
 </body>
 </html>

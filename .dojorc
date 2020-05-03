@@ -2,7 +2,7 @@
 	"build-app": {
 		"watchExtraFiles": ["content/**"],
 		"build-time-render": {
-			"static": false,
+			"static": true,
 			"root": "app",
 			"renderer": "jsdom"
 		},

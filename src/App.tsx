@@ -1,14 +1,31 @@
 import { tsx, create } from '@dojo/framework/core/vdom';
+import theme from '@dojo/framework/core/middleware/theme';
 import Outlet from '@dojo/framework/routing/Outlet';
 import Header from './Header';
 import BlogList from './BlogList';
 import Blog from './Blog';
 
-const factory = create();
+import blogTheme from './theme';
+import * as css from './App.m.css';
 
-export default factory(function App() {
+const factory = create({ theme });
+
+export default factory(function App({ middleware: { theme } }) {
+	if (!theme.get()) {
+		theme.set(blogTheme);
+	}
 	return (
-		<div>
+		<div classes={[css.root]}>
+			<div
+				id="light-theme"
+				data-theme={blogTheme.variants.light.root}
+				classes={[blogTheme.variants.light.root]}
+			></div>
+			<div
+				id="dark-theme"
+				data-theme={blogTheme.variants.dark.root}
+				classes={[blogTheme.variants.dark.root]}
+			></div>
 			<Header title="Dojo Tips" />
 			<Outlet id="main">
 				{{

@@ -1,0 +1,8 @@
+.root {
+	--header-background: #3c4146;
+	--header-text: white;
+	--blog-header-background: #ffb700;
+	--background: white;
+	--blog-text: black;
+	--border-color: rgba(0, 0, 0, 0.1);
+}

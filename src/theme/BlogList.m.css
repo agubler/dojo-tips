@@ -1,0 +1,12 @@
+.root {
+	width: 100%;
+	height: calc(100% - 64px);
+	font-family: 'avenir next', avenir, sans-serif;
+	background: var(--background);
+}
+
+.list {
+	max-width: 48rem;
+	margin-right: auto;
+	margin-left: auto;
+}
