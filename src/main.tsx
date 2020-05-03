@@ -2,6 +2,8 @@ import renderer, { tsx } from '@dojo/framework/core/vdom';
 import Registry from '@dojo/framework/core/Registry';
 import { registerRouterInjector } from '@dojo/framework/routing/RouterInjector';
 import StateHistory from '@dojo/framework/routing/history/StateHistory';
+import { registerThemeInjector } from '@dojo/framework/core/mixins/Themed';
+import theme from './theme/index';
 
 import App from './App';
 import routes from './routes';
@@ -19,6 +21,7 @@ registerRouterInjector(routes, registry, {
 		return title;
 	},
 });
+registerThemeInjector(theme, registry);
 
 const r = renderer(() => <App />);
 r.mount({ registry });

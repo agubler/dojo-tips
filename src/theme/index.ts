@@ -1,3 +1,4 @@
+import * as app from './App.m.css';
 import * as Header from './Header.m.css';
 import * as blog from './Blog.m.css';
 import * as blogList from './BlogList.m.css';
@@ -9,6 +10,7 @@ import * as def from './variants/default.m.css';
 
 export default {
 	theme: {
+		'dojo.tips/App': app,
 		'dojo.tips/Blog': blog,
 		'dojo.tips/BlogList': blogList,
 		'dojo.tips/BlogPreview': blogPreview,

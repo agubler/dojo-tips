@@ -11,11 +11,9 @@ import * as css from './App.m.css';
 const factory = create({ theme });
 
 export default factory(function App({ middleware: { theme } }) {
-	if (!theme.get()) {
-		theme.set(blogTheme);
-	}
+	const themeCss = theme.classes(css);
 	return (
-		<div classes={[css.root]}>
+		<div classes={[themeCss.root]}>
 			<div
 				id="light-theme"
 				data-theme={blogTheme.variants.light.root}
