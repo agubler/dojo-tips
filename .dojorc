@@ -8,6 +8,37 @@
 		},
 		"features": {
 			"dom-pointer-events": true
+		},
+		"pwa": {
+			"manifest": {
+				"name": "Dojo Tips",
+				"short_name": "dojo.tips",
+				"description": "Blog by Anthony Gubler containing fun tips and tricks for using Modern Dojo",
+				"background_color": "#ffffff",
+				"theme_color": "#222127",
+				"icons": [
+					{
+						"src": "src/logo.png",
+						"sizes": [
+							128,
+							256,
+							512
+						]
+					}
+				]
+			},
+			"serviceWorker": {
+				"clientsClaim": true,
+				"routes": [
+					{
+						"urlPattern": ".*",
+						"strategy": "networkFirst",
+						"expiration": {
+							"maxEntries": 25
+						}
+					}
+				]
+			}
 		}
 	},
 	"test-intern": {},
