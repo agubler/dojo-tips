@@ -62,7 +62,7 @@ If you prefer to use `npx` instead of globally installing dependencies globally 
 npx -p @dojo/cli-create-app -p @dojo/cli -- dojo create --name my-first-dojo-app --tsx
 ```
 
-<!-- ![Dojo cli create app output](assets/getting-started-with-dojo/create-app-output.jpg) -->
+![Dojo cli create app output](assets/getting-started-with-dojo/create-app-output.jpg)
 
 Once the command completes a brand new project will be created in the `my-first-dojo-app` directory. The default template, includes a basic application with a header with routing setup.
 
@@ -80,7 +80,7 @@ When you've finished working (or just got started) on your application and want 
 
 All that is needed is to have the [`vercel` package installed globally](https://vercel.com/download), `npm install vercel -g`. Once installed, running `vercel --prod` in your application folder will deploy the built application to your Vercel account (once you have logged in).
 
-<!-- ![deploying a Dojo application with vercel](assets/getting-started-with-dojo/deploy-to-vercel.jpg) -->
+![deploying a Dojo application with vercel](assets/getting-started-with-dojo/deploy-to-vercel.jpg)
 
 Alternatively you can integrate your application's github (bitbucket and gitlab are supported too) repository by clicking `Import Project` from the Vercel dashboard and now you will have a new deployment for pull requests and merges to master auto-magically.
 
