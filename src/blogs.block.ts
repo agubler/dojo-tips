@@ -21,8 +21,9 @@ export default async function () {
 	for (const file of files) {
 		const content = readFileSync(file, 'utf8');
 		const meta = getMetaData(content);
+		console.warn(meta);
 		blogs.push({
-			sortDate: new Date(`${meta.date}`),
+			sortDate: meta.date,
 			file: parse(file).name,
 			meta,
 		});
