@@ -84,6 +84,6 @@ All that is needed is to have the [`vercel` package installed globally](https://
 
 Alternatively you can integrate your application's github (bitbucket and gitlab are supported too) repository by clicking `Import Project` from the Vercel dashboard and now you will have a new deployment for pull requests and merges to master auto-magically.
 
-# Conclusion
+# Wrap up
 
 Getting started with Dojo has never been easier! From creating your Dojo application to deploying the application into production with the Dojo CLI and excellent tooling available from Vercel, meaning that there has never been a better time to jump in and build your next project. Happy coding!

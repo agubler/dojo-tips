@@ -171,3 +171,7 @@ pre[class*='language-'] {
 		font-weight: normal;
 	}
 }
+
+img {
+	max-width: 900px;
+}
